@@ -5,6 +5,8 @@ AUTHOR = u'James'
 SITENAME = u'post past :: james murty'
 SITEURL = 'http://www.jamesmurty.com'
 
+DISQUS_SITENAME = 'postpast'
+
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
@@ -32,14 +34,10 @@ CATEGORY_FEED_ATOM = None
 TAG_FEED_RSS = 'feed/tag/%s.atom.xml'
 
 # Blogroll
-LINKS = (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-         ('Python.org', 'http://python.org'),
-         ('Jinja2', 'http://jinja.pocoo.org'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = None
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = []
 
 DEFAULT_PAGINATION = 6
 
