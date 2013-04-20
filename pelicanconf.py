@@ -25,11 +25,9 @@ PAGE_SAVE_AS = '{slug}/index.html'
 
 FEED_DOMAIN = SITEURL
 FEED_RSS = 'feed/rss.xml'
-FEED_ALL_RSS = 'feed/all.rss.xml'
 CATEGORY_FEED_RSS = None
 TAG_FEED_RSS = 'feed/tag/%s.rss.xml'
 FEED_ATOM = 'feed/atom.xml'
-FEED_ALL_ATOM = 'feed/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TAG_FEED_RSS = 'feed/tag/%s.atom.xml'
 
@@ -41,4 +39,4 @@ SOCIAL = []
 
 DEFAULT_PAGINATION = 6
 
-#THEME = "/Users/jmurty/Documents/code/www.jamesmurty.com/pelican-themes/mnmlist"
+THEME = 'themes/blog'
