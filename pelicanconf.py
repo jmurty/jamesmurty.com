@@ -1,24 +1,46 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
-AUTHOR = u'James Murty'
+AUTHOR = u'James'
 SITENAME = u'post past :: james murty'
 SITEURL = 'http://www.jamesmurty.com'
-FEED_DOMAIN = SITEURL
 
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 DEFAULT_LANG = u'en'
 
+OUTPUT_PATH = 'html/'
+DISPLAY_PAGES_ON_MENU = True
+DEFAULT_CATEGORY = 'Blog'
+
+RELATIVE_URLS = True
+
+ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
+ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
+PAGE_URL = '{slug}/'
+PAGE_SAVE_AS = '{slug}/index.html'
+
+FEED_DOMAIN = SITEURL
+FEED_RSS = 'feed/rss.xml'
+FEED_ALL_RSS = 'feed/all.rss.xml'
+CATEGORY_FEED_RSS = None
+TAG_FEED_RSS = 'feed/tag/%s.rss.xml'
+FEED_ATOM = 'feed/atom.xml'
+FEED_ALL_ATOM = 'feed/all.atom.xml'
+CATEGORY_FEED_ATOM = None
+TAG_FEED_RSS = 'feed/tag/%s.atom.xml'
+
 # Blogroll
-LINKS =  (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
-          ('Python.org', 'http://python.org'),
-          ('Jinja2', 'http://jinja.pocoo.org'),
-          ('You can modify those links in your config file', '#'),)
+LINKS = (('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
+         ('Python.org', 'http://python.org'),
+         ('Jinja2', 'http://jinja.pocoo.org'),
+         ('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
 DEFAULT_PAGINATION = 6
+
+#THEME = "/Users/jmurty/Documents/code/www.jamesmurty.com/pelican-themes/mnmlist"
