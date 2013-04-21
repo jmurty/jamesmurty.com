@@ -39,4 +39,7 @@ SOCIAL = []
 
 DEFAULT_PAGINATION = 6
 
+# Static file directories inside content/
+STATIC_PATHS = ('images',)
+
 THEME = 'themes/blog'
