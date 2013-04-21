@@ -3,6 +3,7 @@
 
 AUTHOR = u'James'
 SITENAME = u'post past :: james murty'
+SITESUBTITLE = u'Contemplating the brave new present'
 SITEURL = 'http://www.jamesmurty.com'
 
 DISQUS_SITENAME = 'postpast'
@@ -31,13 +32,16 @@ FEED_ATOM = 'feed/atom.xml'
 CATEGORY_FEED_ATOM = None
 TAG_FEED_RSS = 'feed/tag/%s.atom.xml'
 
+MENUITEMS = []
+
 # Blogroll
 LINKS = None
 
 # Social widget
 SOCIAL = []
 
-DEFAULT_PAGINATION = 6
+DEFAULT_PAGINATION = 5
+SUMMARY_MAX_LENGTH = None  # Don't summarise
 
 # Static file directories inside content/
 STATIC_PATHS = ('images',)
