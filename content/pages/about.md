@@ -1,4 +1,4 @@
-Title: About
+Title: about
 Date: 2013-04-20 22:00
 Author: James
 Slug: about

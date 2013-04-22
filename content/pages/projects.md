@@ -1,4 +1,4 @@
-Title: Projects
+Title: projects
 Date: 2008-02-15 00:03
 Author: James
 Slug: projects

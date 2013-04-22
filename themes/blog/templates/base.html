@@ -43,13 +43,13 @@
             <h1 id="sitename"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
 
             <p id="sitesubtitle">{{ SITESUBTITLE }}</p>
+        </header>
 
-            {% block header_image %}{% endblock %}
-        </header><!-- /#banner -->
+        <div id="banner-image">{% block header_image %}{% endblock %}</div>
 
         <nav id="menu">
         <ul>
-            <li {% block menu_home_active_class %}{% endblock %}><a href="/">Blog</a></li>
+            <li {% block menu_home_active_class %}{% endblock %}><a href="/">home</a></li>
 
             {% for title, link in MENUITEMS %}
             <li><a href="{{ link }}">{{ title }}</a></li>
@@ -73,10 +73,11 @@
         {% endblock %}
 
         <footer id="contentinfo" class="body">
-        <address id="about" class="vcard body">
-            Powered by <a href="http://getpelican.com/">Pelican</a> and
-            <a href="http://python.org">Python</a>.
-        </address><!-- /#about -->
+            <p>
+                © James Murty 2008-2013.
+                Powered by <a href="http://getpelican.com/">Pelican</a> and
+                <a href="http://python.org">Python</a>.
+            </p>
         </footer><!-- /#contentinfo -->
 
     </body>

@@ -53,7 +53,6 @@ table {
 /* Single-column layout */
 
 body {
-	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
 	font-size: 12pt;
 	margin: 0 auto;
 	max-width: 940px;
@@ -62,47 +61,63 @@ body {
 }
 
 #banner {
-	display: inline-block;
+	display: block;
 	width: 100%;
-	margin-bottom: 0;
+	height: 2em;
+	padding-top: 0.2em;
+	background-color: black;
+}
+#banner a {
+	color: white;	
 }
 #banner a:link {
-	color: black;
 	text-decoration: none;
 	border-bottom: 0;
 }
 #banner #sitename {	
     float: left;
-	font-size: 1.2em;
+	font-size: 1.4em;
+	margin-left: 0.3em;
 }
 #banner #sitesubtitle {
+	color: white;
     float: right;
 	font-style: italic;
 	font-size: 0.8em;
+	margin-right: 3pt;
 }
-#banner img {
-	margin-right: 0;
-	margin-top: 0.5em;
+#banner-image {
+	width: 100%;
+}
+#banner-image img {
+	display: block;
 }
 
-#menu {
-	clear: all;
-	display: inline-block;
+#menu,
+footer.body {
+	display: block;
 	width: 100%;
+	height: 1.4em;
+	color: white;
 	background-color: black;
-	padding: 0.3em;
+	padding-top: 0.4em;
+	padding-bottom: 0.3em;
 }
-#menu a:link {
+#menu a:link,
+footer.body a:link {
 	color: white;
 	text-decoration: none;
 	border-bottom: 0;
-	padding: 0.2em 0.5em;
+	padding: 0.2em 0.2em;
 }
-#menu a:visited {
+#menu a:visited,
+footer.body a:visited {
 	color: white;
 }
 #menu a:hover,
-#menu a:active {
+#menu a:active,
+footer.body a:hover,
+footer.body a:active {
 	color: black;
 	background-color: white;
 }
@@ -119,10 +134,19 @@ body {
 	margin-right: 1em;
 }
 
-#footer {
+footer.body p {
+	margin-left: 0.3em;
+}
+
+.paginator {
+	text-align: center;
 }
 
 /* Fonts */
+
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+}
 
 pre,
 code {
@@ -252,6 +276,17 @@ small {
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
 }
+#content h1 {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+#content h2 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+#content h3 {
+	font-weight: bold;
+}
 #content table {
 	border: 1px solid #e7e7e7;
 	margin: 0 -1px 24px 0;
@@ -279,24 +314,29 @@ ol#post-list {
 	list-style: none;
 	margin-left: 0;
 }
-#post-list article {
+
+.article {
 	margin: 1em 0 1em 0;
 	display: inline-block;
 }
-#post-list article .hentry-heading {
+.article .heading {
 	width: 100%;
 }
-#post-list article .hentry-heading header {
+.article .heading header {
 	float: left;
 }
-#post-list article .hentry-heading footer {
+.article .heading footer {
 	float: right;
 }
-#post-list .entry-title a {
+.article .comments {
+	float: left;
+	opacity: 0.6;	
+}
+.article .entry-title a {
 	font-weight: bold;
 	font-size: 1.1em;
 	border-bottom: 0;
 }
-#post-list .entry-content {
+.article .entry-content {
 	float: left;
 }
