@@ -6,8 +6,6 @@ SITENAME = u'post past :: james murty'
 SITESUBTITLE = u'Contemplating the brave new present'
 SITEURL = 'http://www.jamesmurty.com'
 
-DISQUS_SITENAME = 'postpast'
-
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 

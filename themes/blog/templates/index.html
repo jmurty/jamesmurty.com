@@ -33,6 +33,7 @@
                 </footer><!-- /.post-info -->
             </div>
             <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+            {% include 'comments.html' %}
         </article>
     </li>
 {% endfor %}
