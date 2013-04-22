@@ -16,7 +16,7 @@ I am from Australia but currently live in London, UK.
 Find out more about my technical work on the [projects page][projects] and my
 [LinkedIn profile][linkedin].
 
-Contact me at: `james` `@` `murty.co`
+[Email me directly][] (via MailRubber).
 
 ## This site
 
@@ -37,3 +37,4 @@ Hopefully you will find a bit of both on this site.
   [projects]: /projects
   [get in touch]: /contact
   [linkedin]: http://www.linkedin.com/in/jamesmurty
+  [Email me directly]: http://www.mailrubber.me/7UXtnxYQ
