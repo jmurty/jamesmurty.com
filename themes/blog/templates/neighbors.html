@@ -1,0 +1,16 @@
+<!-- Neighbors data from plugin -->
+<div class="neighbors">
+  <ul>
+  {% if article.next_article %}
+      <a href="{{ SITEURL }}/{{ article.next_article.url}}">
+          ↑ {{ article.next_article.title }}
+      </a>
+  {% endif %}
+  {% if article.prev_article %}
+      {% if article.next_article %}&nbsp;|&nbsp;{% endif %}
+      <a href="{{ SITEURL }}/{{ article.prev_article.url}}">
+          {{ article.prev_article.title }} ↓
+      </a>
+  {% endif %}
+  </ul>
+</div>

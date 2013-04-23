@@ -45,3 +45,13 @@ SUMMARY_MAX_LENGTH = None  # Don't summarise
 STATIC_PATHS = ('images',)
 
 THEME = 'themes/blog'
+
+PLUGIN_PATH = 'pelican-plugins'
+PLUGINS = ['sitemap', 'neighbors']
+
+SITEMAP = {
+    'format': 'xml',
+    'changefreqs': {
+            'pages': 'daily',
+    }
+}

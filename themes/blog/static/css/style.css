@@ -108,7 +108,7 @@ footer.body {
 	color: white;
 	background-color: black;
 	padding-top: 0.4em;
-	padding-bottom: 0.3em;
+	padding-bottom: 0.4em;
 }
 #menu a:link,
 footer.body a:link {
@@ -327,9 +327,11 @@ ol#post-list {
 	list-style: none;
 	margin-left: 0;
 }
+#post-list .article {
+	margin: 1em 0 1em 0;
+}
 
 .article {
-	margin: 1em 0 1em 0;
 	display: inline-block;
 }
 .article:first-child {
@@ -355,4 +357,13 @@ ol#post-list {
 }
 .article .entry-content {
 	float: left;
+}
+.article .neighbors {
+	clear: left;
+	text-align: right;
+	font-size: 0.7em;
+	opacity: 0.5;
+}
+.article .neighbors ul {
+	margin: 0;
 }

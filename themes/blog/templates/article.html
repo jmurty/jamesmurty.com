@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 <section id="content" class="body article">
+
+  {% include 'neighbors.html' %}
+
   <div class="heading">
     <header>
         <h2 class="entry-title">
@@ -25,6 +28,8 @@
   <div class="entry-content">
     {{ article.content }}
   </div><!-- /.entry-content -->
+
+  {% include 'neighbors.html' %}
 
   {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
   <div class="comments">
