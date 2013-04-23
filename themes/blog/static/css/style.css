@@ -35,6 +35,7 @@ body {
 }
 ol, ul {
     list-style: none;
+	text-shadow: #000000 0 0 0px;
 }
 blockquote, q {
     quotes: none;
@@ -52,11 +53,17 @@ table {
 
 /* Single-column layout */
 
+html {
+	background-color: #fcfcfc;
+	padding: 0.5em 1.5em;
+}
+
 body {
 	font-size: 12pt;
 	margin: 0 auto;
 	max-width: 940px;
-	padding: 1em;
+	background-color: white;
+	padding: 0;
 	line-height: 1.4em;
 }
 
@@ -131,7 +138,7 @@ footer.body a:active {
 }
 #menu ul li {
 	float: left;
-	margin-right: 1em;
+	margin-right: 1.5em;
 }
 
 footer.body p {
@@ -239,6 +246,7 @@ small {
 /* Content styles (overrides blog styles) */
 
 #content {
+	padding: 1em;
 }
 #content p,
 #content ul,
@@ -285,6 +293,11 @@ small {
 	font-weight: bold;
 }
 #content h3 {
+	font-size: 1em;
+	font-weight: bold;
+}
+#content h4 {
+	font-size: 0.9em;
 	font-weight: bold;
 }
 #content table {
@@ -318,6 +331,9 @@ ol#post-list {
 .article {
 	margin: 1em 0 1em 0;
 	display: inline-block;
+}
+.article:first-child {
+	margin-top: 0;
 }
 .article .heading {
 	width: 100%;
