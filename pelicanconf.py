@@ -47,7 +47,7 @@ STATIC_PATHS = ('images',)
 THEME = 'themes/blog'
 
 PLUGIN_PATH = 'pelican-plugins'
-PLUGINS = ['sitemap', 'neighbors']
+PLUGINS = ['sitemap', 'neighbors', 'related_posts']
 
 SITEMAP = {
     'format': 'xml',
@@ -55,3 +55,5 @@ SITEMAP = {
             'pages': 'daily',
     }
 }
+
+RELATED_POSTS_MAX = 5
