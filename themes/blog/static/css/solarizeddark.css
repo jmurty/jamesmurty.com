@@ -1,3 +1,8 @@
+pre { background: #002b36 }
+
+/* Styles below generated with:
+   pygmentize -S solarizeddark -f html
+*/
 .hll { background-color: #ffffcc }
 .c { color: #586e75; font-style: italic } /* Comment */
 .err { color: #dc322f } /* Error */

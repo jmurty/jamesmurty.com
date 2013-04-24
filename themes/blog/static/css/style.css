@@ -214,8 +214,7 @@ blockquote i {
 	font-style: normal;
 }
 pre {
-	background: #f7f7f7;
-	color: #222;
+    /* background-color set in solarized{light,dark}.css files */
 	line-height: 1em;
 	margin-bottom: 18px;
 	overflow: auto;
