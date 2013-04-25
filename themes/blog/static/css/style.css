@@ -371,6 +371,7 @@ ol#post-list {
 	text-align: left;
 	font-size: 0.7em;
 	opacity: 0.5;	
+    margin-top: 1em;
 }
 .article .related-posts ul {
     list-style: none;
@@ -379,4 +380,10 @@ ol#post-list {
 .article .related-posts ul li {
 	float: left;
 	margin-right: 12pt;
+}
+.article .entry-tags {
+	clear: left;
+	text-align: left;
+	font-size: 0.7em;
+	opacity: 0.5;
 }

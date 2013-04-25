@@ -9,6 +9,8 @@
 {% block content %}
 <section id="content">
 
+{% block page_title %}{% endblock %}
+
 {% if articles_page.has_previous() %}
 {% include 'pagination.html' %}
 {% endif %}
@@ -32,7 +34,10 @@
                     #}
                 </footer><!-- /.post-info -->
             </div>
+
             <div class="entry-content"> {{ article.summary }} </div><!-- /.entry-content -->
+
+            {% include 'tags.html' %}
             {% include 'comments.html' %}
         </article>
     </li>
