@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /theme/
+Disallow: /static/
+Disallow: /tag/
+Disallow: /category/
+Disallow: /feed/
+Disallow: /feeds/
+
+Sitemap: http://www.jamesmurty.com/sitemap.xml

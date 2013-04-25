@@ -46,6 +46,10 @@ SUMMARY_MAX_LENGTH = None  # Don't summarise
 # Static file directories inside content/
 STATIC_PATHS = ('images',)
 
+FILES_TO_COPY = (
+    ('robots.txt', 'robots.txt'),
+    )
+
 THEME = 'themes/blog'
 
 PLUGIN_PATH = 'pelican-plugins'
