@@ -111,7 +111,8 @@ footer.body {
 	padding-bottom: 0.4em;
 }
 #menu a:link,
-footer.body a:link {
+footer.body a:link,
+#search-submit {
 	color: white;
 	text-decoration: none;
 	border-bottom: 0;
@@ -124,7 +125,9 @@ footer.body a:visited {
 #menu a:hover,
 #menu a:active,
 footer.body a:hover,
-footer.body a:active {
+footer.body a:active,
+#menu .search-form #search-submit:hover,
+#menu .search-form #search-submit:active {
 	color: black;
 	background-color: white;
 }
@@ -133,12 +136,28 @@ footer.body a:active {
 	border-bottom: 2px solid white;
 }
 #menu ul {
+	width: 100%;
+	float: left;
 	margin-left: 0.3em;
 	list-style-type: none;
 }
 #menu ul li {
 	float: left;
 	margin-right: 1.5em;
+}
+#menu ul li.search-form {
+	float: right;
+	margin-right: 0.4em;
+	margin-top: -4px;  /* TODO: Fix this awful hack */
+}
+#menu #search-box {
+	width: 200px;
+	margin-right: 0;
+}
+#menu #search-submit {
+	background-color: black;
+	border: 0;
+	font-size: 100%;
 }
 
 footer.body p {
@@ -171,7 +190,7 @@ a:visited {
 a:active,
 a:hover {
 	border-bottom: 1px solid;
-}}
+}
 
 /* Blog styles (overridden by content styles) */
 
