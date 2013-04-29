@@ -95,6 +95,7 @@ body {
 }
 #banner-image {
 	width: 100%;
+	overflow-x: hidden;
 }
 #banner-image img {
 	display: block;
@@ -237,7 +238,9 @@ pre {
 	line-height: 1em;
 	margin-bottom: 18px;
 	overflow: auto;
-	padding: 1.5em;
+	padding: 1em;
+	/* Allow text in pre to wrap if necessary, e.g. iPhone view */
+	white-space: pre-wrap;
 }
 abbr,
 acronym {
@@ -401,7 +404,7 @@ ol#post-list {
 	margin-right: 12pt;
 }
 .article .entry-tags {
-	clear: left;
+	float: left;
 	text-align: left;
 	font-size: 0.7em;
 	opacity: 0.5;
