@@ -25,12 +25,12 @@ TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
 
 FEED_DOMAIN = SITEURL
-FEED_RSS = 'feed/rss.xml'
+FEED_RSS = 'feeds/rss.xml'
 CATEGORY_FEED_RSS = None
-TAG_FEED_RSS = 'feed/tag/%s.rss.xml'
-FEED_ATOM = 'feed/atom.xml'
+TAG_FEED_RSS = 'feeds/tag/%s.rss.xml'
+FEED_ATOM = 'feeds/atom.xml'
 CATEGORY_FEED_ATOM = None
-TAG_FEED_RSS = 'feed/tag/%s.atom.xml'
+TAG_FEED_ATOM = 'feeds/tag/%s.atom.xml'
 
 MENUITEMS = []
 
