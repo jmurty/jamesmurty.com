@@ -16,9 +16,7 @@
     {{ translations.translations_for(article) }}
     </header>
     <footer class="post-info">
-        <abbr class="published" title="{{ article.date.isoformat() }}">
-        {{ article.locale_date }}
-        </abbr>
+        <p> {{ article.locale_date }} </p>
         {#
         {% if article.author %}
         <address class="vcard author">
