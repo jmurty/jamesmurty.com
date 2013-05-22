@@ -4,7 +4,7 @@
 AUTHOR = u'James'
 SITENAME = u'post past :: james murty'
 SITESUBTITLE = u'Contemplating the brave new present'
-SITEURL = 'http://www.jamesmurty.com'
+SITEURL = 'http://jamesmurty.com'
 
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
