@@ -26,9 +26,11 @@ TAG_SAVE_AS = 'tag/{slug}/index.html'
 
 FEED_DOMAIN = SITEURL
 FEED_RSS = 'feeds/rss.xml'
+FEED_ALL_RSS = None
 CATEGORY_FEED_RSS = None
 TAG_FEED_RSS = 'feeds/tag/%s.rss.xml'
 FEED_ATOM = 'feeds/atom.xml'
+FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TAG_FEED_ATOM = 'feeds/tag/%s.atom.xml'
 
