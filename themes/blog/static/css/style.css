@@ -369,7 +369,11 @@ ol#post-list {
 }
 .article .comments {
 	float: left;
-	opacity: 0.6;	
+    clear: both;
+    width: 100%;
+}
+.comments .summary {
+    opacity: 0.6;
 }
 .article .entry-title a {
 	font-weight: bold;
