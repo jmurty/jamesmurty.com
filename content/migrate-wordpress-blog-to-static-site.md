@@ -3,30 +3,33 @@ Date: 2013-05-23 12:00
 Author: James
 Tags: Python
 Slug: migrate-wordpress-blog-to-static-site
-Status: draft
 
 
-I recently migrated my long-neglected blog from a self-hosted Wordpress
-installation on my own VPS to a static site hosted on the [Amazon S3][s3]
-storage service using its [website hosting][s3-website] feature.
+I have just finished  migrating my long-neglected blog from a self-hosted
+Wordpress installation on my own VPS to a static site hosted on the
+[Amazon S3][s3] storage service using its [website hosting][s3-website]
+feature.
 
-This post captures the main steps I went through, and the problems I
-encountered, in case anyone else is interested in doing the same thing.
+This post captures the main steps involved, in case anyone else is interested
+in doing the same thing.
 
-## Why Migrate from Wordpress?
+### Why Migrate from Wordpress?
 
 My blog has run well enough on a self-hosted Wordpress set-up for years, first
-at a site hosting company (where performance was terrible) then on my own
+at a cheap site hosting company (where performance was terrible) then on my own
 [Linode][linode] VPS server (where performance has been great).
 
-However, I have always been nervous about relying on the PHP-based Wordpress
-code due to the frequent security updates it requires and my gut-level distrust
-of PHP itself (I know it well enough not to trust it).
+However, I have never been very happy relying on the PHP-based Wordpress
+app due to the frequent security updates it requires and my gut-level distrust
+of PHP itself. I know it well enough not to trust it, especially when my blog
+can lie neglected for months at a time when I'm busy. It made me nervous
+knowing I could be one tardy security-update away from a hacked site and
+server.
 
-Besides, this blog is so small and so infrequently updated that such a
-powerful blogging system is complete overkill for my needs.
+Besides, this blog is small enough that any powerful blogging system is
+overkill for my needs.
 
-## Static Site Generation
+### Static Site Generation
 
 Because my blog is simple, it is a perfect candidate to be served as a static
 site instead of a dynamically-generated one. Instead of Wordpress and PHP code
@@ -39,20 +42,19 @@ posts, provide RSS/Atom syndication feeds for blog reader software, provide
 sitemap XML files for Google, etc. etc. So I need a middle ground: a
 [static site generator][].
 
-At this stage it's worth saying explicitly that static site generators, while
-"simpler" from a web-server point of view since you just serve HTML pages, are
-*a lot* harder to use than Wordpress and other blogging software, especially if
-someone else is doing the hosting for you as well like
-[Wordpress.com][wordpress]. As the rest of this post will make clear,
-generating and hosting your own static site is an involved and deeply nerdy
-process best suited to people who are coders or similarly masochistic.
+At this stage it's worth saying explicitly that using static site generators,
+while "simpler" from a web-server point of view, requires much more knowledge
+about how web sites work and how to host them. As the rest of this post will
+make clear, generating and hosting your own static site is an involved and
+deeply nerdy process best suited to people who are web programmers, or
+interested in becoming one.
+
+#### Pelican
 
 There are roughly fourteen bazillion site generator projects around, with the
 number growing constantly.
 
-### Pelican
-
-I chose [Pelican][pelican] because:
+I chose [Pelican][pelican] for my blog because:
 
  - It seems relatively well-established and mature in the field.
  - It allows posts to be written in Markdown (or other human-friendly markup
@@ -60,16 +62,16 @@ I chose [Pelican][pelican] because:
  - It's written in Python, a language I like and that I can easily hack on if
    I want to contribute fixes or [improvements][pelican-pages-import] to the
    project.
- - It supports plugins to do important work like generating sitemap files and
-   other niceties.
+ - It has plugins that do things like generating sitemap files and
+   other niceties that would be tedious to build myself.
 
 I installed a very recent code version (pre 3.3) of Pelican into a pre-prepared
-[virtualenv][] Python environment, since the latest code has some improvements
-that are particularly useful for migrating existing Wordpress sites. I also
-installed some additional requirements:
+[virtualenv][] Python environment. I used the latest code because it has
+improvements that are particularly useful for migrating existing Wordpress
+sites. I also installed some additional requirements:
 
     :::bash
-    # Pre 3.3 code version with slug and pages import improvements
+    # Pelican pre 3.3 code version, with slug and pages import improvements
     pip install -e git+git@github.com:jmurty/pelican.git@675d6c81#egg=pelican-dev
 
     # Markdown for migrating and authoring posts in this markup language
@@ -83,15 +85,13 @@ configuration files and some helper scripts.
 
 Be warned though: the generated scripts have their own copies of configuration
 settings you choose while running the quickstart, so if you subsequently change
-your Pelican configuration files then run these scripts your changes will have
-no effect.
+your Pelican configuration files and run these scripts your config changes
+will have no effect. I found this annoying enough that I ended up removing the
+helper scripts and use the explicit Pelican commands instead.
 
-I found this annoying enough that I ended up removing the helper scripts and
-use the explicit Pelican commands instead.
+### Migrate Data from Wordpress
 
-## Migrate Data from Wordpress
-
-### Migrate Your Posts
+#### Migrate Your Posts
 
 Migrating my existing Wordpress blog posts was only somewhat difficult and
 fiddly, to be honest it was easier than I expected:
@@ -102,7 +102,7 @@ fiddly, to be honest it was easier than I expected:
  2. [Export][wordpress-export] and download your Wordpress posts and comments
     as an XML file. I saved this file as `site.wordpress.xml`
  3. Run the `pelican-import` command to convert the Wordpress posts into
-    Markdown-formatted files in the `content` directory:
+    Markdown-formatted files written to the `content` directory:
 
         :::bash
         pelican-import --wpfile --dir-page \
@@ -111,8 +111,8 @@ fiddly, to be honest it was easier than I expected:
 
 At this stage you will hopefully have a collection of Markdown files that
 correspond very closely to your Wordpress posts. Take a look at some of the
-files and note the metadata included at the top, fields like `Title` and
-`Slug` which capture information about the original posts.
+files and note the metadata included at the top; fields like `Title` and
+`Slug` capture important information about the original posts.
 
 Unfortunately I found the conversion process was imperfect so I needed to look
 closely at many of the post files to check for quirks and then fix these issues
@@ -123,37 +123,39 @@ I should have done from the very beginning in Wordpress, but changing this was
 straight-forward with some global find-and-replace changes in the markdown
 files.
 
-### Migrate Your Comments
+#### Migrate Your Comments
 
-One drawback of static sites is that there is no way to process comments
-submitted by site visitors.
+One drawback of static sites is that there is no way to do server-side
+processing of comments submitted by site visitors. At least, not without
+defeating the point of making your site static in the first place.
 
 If you wish to allow comments on your static site you will need to use
 a javascript-based commenting system, such as the one provided by
 [Disqus][disqus].
 
-I am using Disqus on my new static site. It was quite easy to set this up,
-I just created an account on the service, added my site, and set the
-`DISQUS_SITENAME` setting in Pelican's `publishconf.py` configuration file.
+I am using Disqus on the now-static site, as you will see if you view or leave
+comments below. It was quite easy to set this up: I created an account on
+the service, added my site details, and set the `DISQUS_SITENAME` setting in
+Pelican's `publishconf.py` configuration file.
 
 Because I also wanted to keep the comments from my existing Wordpress blog site
 I also exported these comments by:
 
  - installing the *Disqus Comment System* plugin on my Wordpress site.
  - configuring my new Disqus site account in the plugin
- - hit the *Export Comments* button to export the comments from Wordpress to
-   Disqus.
- - monitored progress of the export on the Disqus dashboard.
+ - exporting the comments from Wordpress to Disqus via the *Export Comments*
+   button.
+ - monitoring progress of the export on the Disqus dashboard.
 
-The export process took a long time (days, literally) and a few of my blogs
-comments didn't survive the process, which isn't a big deal for my site
-but hopefully you will have better luck.
+The export process took a long time (days) and a few of my blog's comments
+didn't survive the process, which isn't a big deal for my site but might be a
+problem for others. Hopefully you will have better luck with this.
 
-## Generate the Static Site HTML
+### Generate the Static Site HTML
 
 Now that your content is in place you can generate a static site to check how
-it all looks. Here is the command to output the content in `content/` to static
-files to the `html` directory using your configuration:
+it all looks. Here is the command to convert the markdown files in `content/`
+to static files to the `html/` directory:
 
     :::bash
     # Add --debug flag to see exactly what is happening
@@ -161,19 +163,20 @@ files to the `html` directory using your configuration:
 
 You can now look directly at the generated files in the `html/` directory, or
 run Pelican in server mode so you can view your blog in a web browser at
-http://localhost:8000/ using the `develop_server.sh` helper script
-generated by the quickstart process or with the following explicit commands:
+[http://localhost:8000/][localhost-8000] using the `develop_server.sh` helper
+script generated by the "quickstart" process, or with the following explicit
+commands:
 
     :::bash
     # Run Python's built-in web server on html/ as a background job
     cd html/
     python -m SimpleHTTPServer &
 
-### Customise the Generated Site Layout
+#### Customise the Generated Site Layout
 
-Once you can view the generated site in a browser you will no doubt want to
-customise a number of things in your `pelicanconf.py` configuration file to
-make the site work exactly as you want it to.
+Once you can view the generated site in a browser you can customise a number of
+things in your `pelicanconf.py` configuration file to make the site work
+exactly the way you want.
 
 In my case I wanted the new static site to replace the original Wordpress one
 without breaking all the links, because [Cool URIs don't change][cool-uris].
@@ -189,14 +192,14 @@ the datestamp + slug format I used in Wordpress, for example:
 I also customised where RSS/Atom feeds are saved, whether pages are displayed,
 and other things. Check out the Pelican documentation to see what you can do.
 
-### Theme {#theme}
+#### Theme {#theme}
 
 I created my own theme for the blog. You can tell because it's very simple, and
 very ugly (I'm no designer).
 
 It was pretty easy to do this by following the Pelican theming documentation
-and cribbing liberally from the example themes available in [Pelican
-Themes][pelican-themes] Github repository.
+and stealing ideas and code snippets from the example themes available in
+[Pelican Themes][pelican-themes] Github repository.
 
 One particularly cool thing I will mention is how to use the excellent
 [Solarized][solarized] colour themes for code snippets, so at least that part
@@ -206,14 +209,14 @@ of my blog isn't ugly. Generate the necessary CSS files like so:
     # Install Pygments and solarized style
     pip install Pygments pygments-style-solarized
 
-    # Generate a CSS files of light and dark solarized colours
+    # Generate CSS files of light and dark solarized colours
     pygmentize -S solarizeddark -f html > solarizeddark.css
     pygmentize -S solarizedlight -f html > solarizedlight.css
 
 You can then add these CSS files to your template to get solarized code
 highlighting in your posts.
 
-Note that I found I had to set the overall background colour to get things to
+Note: I found I had to set the overall background colour to get things to
 look right, here's what I did:
 
     :::css
@@ -223,13 +226,15 @@ look right, here's what I did:
     /* Add this line to the top of solarizeddark.css */
     pre { background: #002b36 }
 
-### Pelican Plugins
+#### Pelican Plugins
 
 The final Pelican-related tweaks I made were to add some existing plugins to do
-useful work like generate a `sitemap.xml` file and make available data about
-next/previous and related posts to help with site navigation.
+useful work like generate a `sitemap.xml` file and make extra information
+available to help with site navigation, such as lists of next/previous and
+related posts.
 
-I added the `pelican-plugins` codebase to my project directory:
+To use the plugins I added the [pelican-plugins][pelican-plugins] codebase to
+my project directory:
 
     :::bash
     git submodule add https://github.com/getpelican/pelican-plugins
@@ -248,17 +253,14 @@ Then configured Pelican to find and use the relevant plugins:
         }
     }
 
-## Site Hosting with Amazon S3 in Website Hosting Mode
+### Site Hosting with Amazon S3 in Website Hosting Mode
 
-With a static blog site instead of a dynamic one, it is not necessary to
-host it on a server capable of running dynamic code.
+With a static blog site instead of a dynamic one, it was no longer necessary to
+host it on my VPS server. By moving the site entirely to a static-file-serving
+platform I could free up my VPS to the testing-ground I had originally
+intended.
 
-This made it possible move the site entirely to a static-file-serving platform,
-which was great because I liked the idea of freeing up my VPS to be
-a testing-ground as I'd originally intended, without having to worry about
-breaking my blog when I mess up.
-
-With it's relatively recently-added support for [Website hosting][s3-website],
+With it's relatively recently-added support for [website hosting][s3-website],
 the Amazon S3 storage service made an attractive choice. It's pretty simple,
 extremely reliable, fairly priced, and I'm very familiar with it.
 
@@ -267,10 +269,15 @@ requirements:
 
  - My blog should be accessible at both the [jamesmurty.com][blog] root domain
    and the [www.jamesmurty.com][blog-subdomain] subdomain.
- - The old RSS feed endpoint at http://www.jamesmurty.com/feed/ shouldn't
-   change, so subscribers continue receiving my blog posts.
+ - The old RSS feed endpoint at *http://www.jamesmurty.com/feed/* shouldn't
+   change, so that subscribers continue receiving my blog posts (like this
+   one).
 
-### Generate Site to Publish
+To serve the site from S3 I needed to generate the site in a publishable form,
+set up my S3 account to store and serve it, and tweak my domain's DNS
+management to hook everything up correctly.
+
+#### Generate Site for Publishing
 
 By default the Pelican quickstart process produces two configuration files,
 `pelicanconf.py` and `publishconf.py`. The former stores most of your settings
@@ -281,7 +288,7 @@ In my case the `publishconf.py` file has two extra settings:
 
  - Relative URLs are disabled, to ensure in-post links work properly when read
    in an RSS feed reader.
- - Disqus site configuration for comments
+ - Disqus is configured to handle comments.
 
 Before you publish your site, **make sure you are using the correct
 configuration file** in the `-s` switch to the pelican command. For example:
@@ -289,7 +296,7 @@ configuration file** in the `-s` switch to the pelican command. For example:
     :::bash
     pelican content/ -o html -s publishconf.py --debug
 
-### Set Up S3 Buckets
+#### Set Up S3 Buckets
 
 Here are the steps I took to set up S3 hosting (using the
 [S3 console][s3-console] website):
@@ -299,19 +306,19 @@ Here are the steps I took to set up S3 hosting (using the
  2. Upload the generated site files in the `html/` directory to the bucket
     `jamesmurty.com`. I used my [Synchronize][] application, but any
     S3-compatible file copying program will do.
- 3. Visit the bucket's exact **Endpoint** URL as shown in the *Static Website
-    Hosting* properties area to make sure everything looks and works OK.
+ 3. Visit the bucket's exact *Endpoint* URL as shown in the *Static Website
+    Hosting* properties area to make sure everything looks and works properly.
 
 To configure the `www.jamesmurty.com` root domain bucket to redirect requests
 to the authoritative `jamesmurty.com` bucket:
 
- - Edit the bucket Properties, open the *Static Website Hosting* section.
+ - Edit the bucket Properties and open the *Static Website Hosting* section.
  - Select *Redirect all requests to another host name*
  - Enter the root domain: `jamesmurty.com`
 
 Because my original blog used `/feed/` as the RSS feed endpoint, I also needed
-to make this URL path point at the new RSS feed location `/feeds/rss.xml`. This
-was easy enough to do with a custom routing rule specific with the following
+to make this URL path point to the new RSS feed location `/feeds/rss.xml`. This
+was easy enough to do with a custom routing rule specified with the following
 XML snippet in the *Edit Redirection Rules* section of the *Enable Web Hosting*
 properties:
 
@@ -327,11 +334,13 @@ properties:
         </RoutingRule>
     </RoutingRules>
 
-### Set Up DNS using Amazon Route 53
+#### Set Up DNS using Amazon Route 53
 
-To serve websites from S3 using a root domain, i.e. a domain without a leading
-subdomain prefix like `www` or `blog`, you must use [Amazon Route 53][route-53]
-as a DNS server for the site.
+To serve websites from S3 using a root domain, such as a domain without
+a leading subdomain prefix like `www` or `blog`, you must use
+[Amazon Route 53][route-53] as a DNS server for the site. Unfortunately this
+adds to the complexity and cost of S3-hosted websites, but I decided it is
+worth the hassle.
 
 The necessary steps are covered in detail in Amazon's
 [website hosting][s3-website] instructions, but in brief here's what I did to
@@ -347,12 +356,11 @@ set up the domain-to-bucket mappings:
     The target bucket should be selectable in the *Alias Target* drop down
     list.
  5. Add a CNAME record to the record set to map the `www.jamesmurty.com`
-    subdomain to the authoritative S3 bucket, in my
-    case `jamesmurty.com.s3-website-us-east-1.amazonaws.com`
+    subdomain to the root domain `jamesmurty.com`.
 
 Because I was migrating existing domains, at this point I also copied
-additional DNS settings from my original DNS provided over to Route 53, such as
-MX mail records.
+some additional DNS settings from my original DNS provided over to Route 53,
+such as MX mail records.
 
 Once you are happy that the Route 53 settings are correct, set up (or switch
 over) the nameservers at your domain name registrar to point to the *Delegation
@@ -382,3 +390,5 @@ your static site should be available.
   [Synchronize]: http://jets3t.org/applications/synchronize.html
   [route-53]: http://aws.amazon.com/route53/
   [disqus]: http://disqus.com/
+  [pelican-plugins]: https://github.com/getpelican/pelican-plugins
+  [localhost-8000]: http://localhost:8000/
