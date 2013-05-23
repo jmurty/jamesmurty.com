@@ -97,7 +97,7 @@ Try out the latest code and let me know what you think. Head over to the
 you're familiar with Mercurial) or simply download it via the "get
 source" link.
 
-  [beta versioning]: http://www.jamesmurty.com/2010/01/20/jets3t-s3-versioning/
+  [beta versioning]: http://jamesmurty.com/2010/01/20/jets3t-s3-versioning/
   [now available in all regions]: http://aws.typepad.com/aws/2010/02/amazon-s3-enhancement-versioning.html
   [purchased one of these devices]: http://aws.amazon.com/mfa/
   [AWS Console]: http://aws.amazon.com/console/

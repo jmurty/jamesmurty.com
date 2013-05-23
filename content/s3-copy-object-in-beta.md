@@ -71,5 +71,5 @@ type and "example-name" metadata items:
       'from-bucket', 'Object.txt', 'private', metadata)
 
   [announced]: http://developer.amazonwebservices.com/connect/thread.jspa?messageID=88304
-  [in March]: http://www.jamesmurty.com/2008/03/22/s3_copy_proposal/
+  [in March]: http://jamesmurty.com/2008/03/22/s3_copy_proposal/
   [Programming Amazon Web Services]: http://www.amazon.com/gp/product/0596515812?ie=UTF8&tag=jamesmurty-20&link_code=as3&camp=211189&creative=373489&creativeASIN=0596515812

@@ -145,5 +145,5 @@ QueryWithAttributes.
   [couple of weeks ago]: http://aws.typepad.com/aws/2008/08/amazon-simpledb.html
   [Programming Amazon Web Services]: http://www.amazon.com/gp/product/0596515812?ie=UTF8&tag=jamesmurty-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596515812
   [download a file]: http://s3.jamesmurty.com/query_with_attributes.txt
-  [sorting]: http://www.jamesmurty.com/2008/07/30/simpledb-sorting/
+  [sorting]: http://jamesmurty.com/2008/07/30/simpledb-sorting/
   [forum discussion]: http://developer.amazonwebservices.com/connect/thread.jspa?threadID=24190&tstart=0

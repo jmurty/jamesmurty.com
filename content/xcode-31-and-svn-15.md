@@ -44,6 +44,6 @@ Xcode, I realise it may actually be easier to manage everything with
 Subversion's command line tools. Still, at least now I have the option.
 
   [Xcode 3 Unleashed]: http://www.amazon.com/gp/product/0321552636?ie=UTF8&tag=postpastjamem-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0321552636
-  [Xcode 3 Error 180001]: http://www.jamesmurty.com/wordpress/wp-content/uploads/2009/03/error-180001.jpg "Xcode 3 Error 180001"
-  [access-denied]: http://www.jamesmurty.com/wordpress/wp-content/uploads/2009/03/access-denied.jpg "access-denied"
+  [Xcode 3 Error 180001]: http://jamesmurty.com/static/images/2009/03/error-180001.jpg "Xcode 3 Error 180001"
+  [access-denied]: http://jamesmurty.com/static/images/2009/03/access-denied.jpg "access-denied"
   [Rastikan's post]: http://discussions.apple.com/message.jspa?messageID=9141013#9141013

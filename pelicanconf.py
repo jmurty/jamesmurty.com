@@ -46,7 +46,7 @@ DEFAULT_PAGINATION = 5
 SUMMARY_MAX_LENGTH = None  # Don't summarise
 
 # Static file directories inside content/
-STATIC_PATHS = ('images',)
+STATIC_PATHS = ('images', 'files', )
 
 FILES_TO_COPY = (
     ('robots.txt', 'robots.txt'),

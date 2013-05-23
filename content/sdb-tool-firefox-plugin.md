@@ -23,4 +23,4 @@ everyone's benefit.
   [AWS Blog]: http://aws.typepad.com/aws/2008/12/bizo-sdb-tool.html
   [SDB Tool]: http://code.google.com/p/sdbtool/
   [Bizo, Inc]: http://www.bizo.com/
-  [SDB Tool Screenshot]: http://www.jamesmurty.com/wordpress/wp-content/uploads/2008/12/sdb-tool-screenshot.jpg "SDB Tool Screenshot"
+  [SDB Tool Screenshot]: http://jamesmurty.com/static/images/2008/12/sdb-tool-screenshot.jpg "SDB Tool Screenshot"
