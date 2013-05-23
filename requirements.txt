@@ -1,0 +1,22 @@
+# Pelican pre 3.3 version with import improvements (and my pages addition)
+-e git+git@github.com:jmurty/pelican.git@675d6c81#egg=pelican-dev
+
+Markdown==2.3.1
+BeautifulSoup==3.2.1
+
+Pygments==1.6
+pygments-style-solarized==0.1.0
+
+Unidecode==0.04.12
+beautifulsoup4==4.1.3
+blinker==1.2
+docutils==0.10
+feedgenerator==1.5
+lxml==3.1.2
+mock==1.0.1
+pytz==2013b
+six==1.3.0
+smartypants==1.6.0.3
+typogrify==2.0.0
+unittest2==0.5.1
+wsgiref==0.1.2
