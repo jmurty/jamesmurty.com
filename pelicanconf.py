@@ -50,7 +50,8 @@ STATIC_PATHS = ('images', 'files', )
 
 FILES_TO_COPY = (
     ('robots.txt', 'robots.txt'),
-    )
+    ('images/favicon.ico', 'favicon.ico'),
+)
 
 THEME = 'themes/blog'
 
@@ -60,7 +61,7 @@ PLUGINS = ['sitemap', 'neighbors', 'related_posts']
 SITEMAP = {
     'format': 'xml',
     'changefreqs': {
-            'pages': 'daily',
+        'pages': 'daily',
     }
 }
 
