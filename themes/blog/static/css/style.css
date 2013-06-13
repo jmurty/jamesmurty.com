@@ -182,15 +182,12 @@ code {
 
 a:link {
 	color: black;
-	text-decoration: none;
-	border-bottom: 1px dotted;
 }
 a:visited {
-	color: black;
 }
 a:active,
 a:hover {
-	border-bottom: 1px solid;
+	text-decoration: none;
 }
 
 /* Blog styles (overridden by content styles) */
