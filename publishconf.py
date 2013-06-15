@@ -14,4 +14,4 @@ RELATIVE_URLS = False
 
 DISQUS_SITENAME = 'postpast'
 
-#GOOGLE_ANALYTICS = ""
+GOOGLE_ANALYTICS = {'id': 'UA-41775266-1', 'site': 'jamesmurty.com'}
