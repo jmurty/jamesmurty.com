@@ -21,7 +21,9 @@ To do this:
 1. Open the extension's options, e.g. via Tools > Extensions.
 2. Hit the *Add...* button to add a new feed reader.
 3. Set the *Description* to "Feedly" or whatever you like, and set the *URL* to
-   [http://www.feedly.com/home#subscription/feed/%s][feed]
+   [http://cloud.feedly.com/#subscription/feed/%s][feed]  
+   (was <s>http://www.feedly.com/home#subscription/feed/%s</s>, thanks to Gary
+   Oppenhuis for the updated URL).
 4. Save the new entry, and make sure it's your default.
 
 Thanks to [Christina Davis][kudos] for documenting this process as a comment in
@@ -36,4 +38,4 @@ a way to link directly to the comment.
   [Normandy]: http://blog.feedly.com/2013/03/14/google-reader/
   [ext]: https://chrome.google.com/webstore/detail/rss-subscription-extensio/nlbjncdgjeocebhnmkbbbdekmmmcbfjd?hl=en
   [kudos]: https://plus.google.com/112623135884038579189
-  [feed]: http://www.feedly.com/home#subscription/feed/%s
+  [feed]: http://cloud.feedly.com/#subscription/feed/%s
