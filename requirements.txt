@@ -11,7 +11,7 @@ Unidecode==0.04.12
 beautifulsoup4==4.1.3
 blinker==1.2
 docutils==0.10
-feedgenerator==1.5
+feedgenerator==1.6
 lxml==3.1.2
 mock==1.0.1
 pytz==2013b
