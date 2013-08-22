@@ -66,7 +66,7 @@ EXTRA_PATH_METADATA = {
 THEME = 'themes/blog'
 
 PLUGIN_PATH = 'pelican-plugins'
-PLUGINS = ['sitemap', 'neighbors', 'related_posts']
+PLUGINS = ['sitemap', 'neighbors']
 
 SITEMAP = {
     'format': 'xml',
