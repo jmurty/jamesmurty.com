@@ -1,5 +1,5 @@
 # Pelican pre 3.3 version with import improvements (and my pages addition)
--e git+git@github.com:jmurty/pelican.git@675d6c81#egg=pelican-dev
+-e git+git@github.com:jmurty/pelican.git@master#egg=pelican-dev
 
 Markdown==2.3.1
 BeautifulSoup==3.2.1

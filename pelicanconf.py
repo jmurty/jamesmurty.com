@@ -23,6 +23,8 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 TAG_URL = 'tag/{slug}/'
 TAG_SAVE_AS = 'tag/{slug}/index.html'
+STATIC_URL = 'static/{path}'
+STATIC_SAVE_AS = 'static/{path}'
 
 FEED_DOMAIN = SITEURL
 FEED_RSS = 'feeds/rss.xml'
@@ -46,12 +48,20 @@ DEFAULT_PAGINATION = 5
 SUMMARY_MAX_LENGTH = None  # Don't summarise
 
 # Static file directories inside content/
-STATIC_PATHS = ('images', 'files', )
-
-FILES_TO_COPY = (
-    ('robots.txt', 'robots.txt'),
-    ('images/favicon.ico', 'favicon.ico'),
+STATIC_PATHS = (
+    'images',
+    'files',
+    'robots.txt',
+    'images/favicon.ico',
 )
+
+# Shift location of static files (instead of easier-to-use but deprecated
+# FILES_TO_COPY setting).
+EXTRA_PATH_METADATA = {
+    # Shift some static files to site root
+    'robots.txt': {'path': '../robots.txt'},
+    'images/favicon.ico': {'path': '../favicon.ico'},
+}
 
 THEME = 'themes/blog'
 
