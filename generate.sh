@@ -1,3 +1,3 @@
 #!/bin/bash
-# Generate site with *dev* settings
-pelican content/ -o html -s pelicanconf.py --debug
+# Generate site with *production* settings
+pelican content/ -o html -s publishconf.py
