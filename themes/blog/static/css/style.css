@@ -204,15 +204,6 @@ ol {
 	list-style: decimal;
 	margin: 0 0 1em 1.5em;
 }
-ol ol {
-	list-style: upper-alpha;
-}
-ol ol ol {
-	list-style: lower-roman;
-}
-ol ol ol ol {
-	list-style: lower-alpha;
-}
 strong {
 	font-weight: bold;
 }
