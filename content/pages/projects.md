@@ -1,12 +1,12 @@
 Title: projects
-Date: 2008-02-15 00:03
+Date: 2014-03-07 15:29
 Author: James
 Slug: projects
 
 Coding
 ------
 
-### XML for Humans in Python
+### xml4h: XML for Humans in Python
 
 *xml4h* is a library for Python to make working with XML a human-friendly
 activity.
@@ -26,7 +26,7 @@ Visit the [JetS3t Homepage][].
 XML Builder is a utility that creates simple XML documents using
 relatively sparse Java code.
 
-Google Code project page: [java-xmlbuilder][].
+GitHub project page: [java-xmlbuilder][].
 
 ### Python Payflow Pro Client
 
@@ -59,7 +59,7 @@ Service (SQS), Flexible Payments Service (FPS), and SimpleDB.
   [xml4h-docs]: http://xml4h.readthedocs.org/
   [xml4h-github]: https://github.com/jmurty/xml4h
   [JetS3t Homepage]: http://jets3t.org "JetS3t Homepage"
-  [java-xmlbuilder]: http://code.google.com/p/java-xmlbuilder/ "java-xmlbuilder"
+  [java-xmlbuilder]: https://github.com/jmurty/java-xmlbuilder "java-xmlbuilder"
   [Payflow Pro]: https://www.paypal.com/cgi-bin/webscr?cmd=_payflow-pro-overview-outside
   [python-payflowpro]: http://code.google.com/p/python-payflowpro/ "python-payflowpro"
   [iContact]: http://www.icontact.com/
