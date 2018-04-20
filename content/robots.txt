@@ -6,4 +6,4 @@ Disallow: /category/
 Disallow: /feed/
 Disallow: /feeds/
 
-Sitemap: http://jamesmurty.com/sitemap.xml
+Sitemap: http://james.murty.co/sitemap.xml

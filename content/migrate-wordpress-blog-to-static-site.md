@@ -267,9 +267,9 @@ extremely reliable, fairly priced, and I'm very familiar with it.
 The process for setting this up was made a bit complex because I had some extra
 requirements:
 
- - My blog should be accessible at both the [jamesmurty.com][blog] root domain
-   and the [www.jamesmurty.com][blog-subdomain] subdomain.
- - The old RSS feed endpoint at *http://www.jamesmurty.com/feed/* shouldn't
+ - My blog should be accessible at both the [james.murty.co][blog] root domain
+   and the [www.james.murty.co][blog-subdomain] subdomain.
+ - The old RSS feed endpoint at *http://www.james.murty.co/feed/* shouldn't
    change, so that subscribers continue receiving my blog posts (like this
    one).
 
@@ -302,19 +302,19 @@ Here are the steps I took to set up S3 hosting (using the
 [S3 console][s3-console] website):
 
  1. Create S3 bucket names corresponding to my site's domain names:
-    `jamesmurty.com` and `www.jamesmurty.com`
+    `james.murty.co` and `www.james.murty.co`
  2. Upload the generated site files in the `html/` directory to the bucket
-    `jamesmurty.com`. I used my [Synchronize][] application, but any
+    `james.murty.co`. I used my [Synchronize][] application, but any
     S3-compatible file copying program will do.
  3. Visit the bucket's exact *Endpoint* URL as shown in the *Static Website
     Hosting* properties area to make sure everything looks and works properly.
 
-To configure the `www.jamesmurty.com` root domain bucket to redirect requests
-to the authoritative `jamesmurty.com` bucket:
+To configure the `www.james.murty.co` root domain bucket to redirect requests
+to the authoritative `james.murty.co` bucket:
 
  - Edit the bucket Properties and open the *Static Website Hosting* section.
  - Select *Redirect all requests to another host name*
- - Enter the root domain: `jamesmurty.com`
+ - Enter the root domain: `james.murty.co`
 
 Because my original blog used `/feed/` as the RSS feed endpoint, I also needed
 to make this URL path point to the new RSS feed location `/feeds/rss.xml`. This
@@ -351,12 +351,12 @@ set up the domain-to-bucket mappings:
     in Amazon's console)
  3. Create a record set for the hosted zone
  4. Add an A record alias (*Type: A*, *Alias: Yes*) to the record set to map my
-    root domain `jamesmurty.com` to the **Amazon** URL for the authoritative
-    S3 bucket, in my case `jamesmurty.com.s3-website-us-east-1.amazonaws.com`.  
+    root domain `james.murty.co` to the **Amazon** URL for the authoritative
+    S3 bucket, in my case `james.murty.co.s3-website-us-east-1.amazonaws.com`.  
     The target bucket should be selectable in the *Alias Target* drop down
     list.
- 5. Add a CNAME record to the record set to map the `www.jamesmurty.com`
-    subdomain to the root domain `jamesmurty.com`.
+ 5. Add a CNAME record to the record set to map the `www.james.murty.co`
+    subdomain to the root domain `james.murty.co`.
 
 Because I was migrating existing domains, at this point I also copied
 some additional DNS settings from my original DNS provided over to Route 53,
@@ -370,8 +370,8 @@ Before long, your domain names should resolve to the appropriate S3 buckets and
 your static site should be available.
 
 
-  [blog]: http://jamesmurty.com/
-  [blog-subdomain]: http://www.jamesmurty.com/
+  [blog]: http://james.murty.co/
+  [blog-subdomain]: http://www.james.murty.co/
   [s3]: http://aws.amazon.com/s3/
   [s3-website]: http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html
   [linode]: http://www.linode.com/

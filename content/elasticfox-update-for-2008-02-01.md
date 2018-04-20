@@ -10,4 +10,4 @@ Availability Zones. This is my favourite tool for managing EC2
 instances, so check it out if you haven't already.
 
   [ElasticFox]: http://developer.amazonwebservices.com/connect/entry.jspa?externalID=609
-  [latest EC2 features]: http://.jamesmurty.com/2008/03/27/ec2_api_2008_02_01/
+  [latest EC2 features]: http://james.murty.co/2008/03/27/ec2_api_2008_02_01/

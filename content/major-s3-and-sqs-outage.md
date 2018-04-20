@@ -25,5 +25,5 @@ as many contingency options as much as possible, but few contingencies
 could have survived that outage. Let's hope it isn't repeated.
 
   [service health dashboard]: http://status.aws.amazon.com/
-  [The AWS Service Health Dashboard showing that the S3 and SQS services are down]: http://jamesmurty.com/static/images/2008/07/aws_dashboard_s3_and_sqs_down.gif "aws_dashboard_s3_and_sqs_down"
+  [The AWS Service Health Dashboard showing that the S3 and SQS services are down]: http://james.murty.co/static/images/2008/07/aws_dashboard_s3_and_sqs_down.gif "aws_dashboard_s3_and_sqs_down"
   [Amazon S3 Availability Event: July 20, 2008]: http://status.aws.amazon.com/s3-20080720.html

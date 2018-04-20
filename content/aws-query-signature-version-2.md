@@ -135,4 +135,4 @@ file to see all the changes -- they are mostly in the `do_query` method.
   [Making Secure Requests to Amazon Web Services]: http://developer.amazonwebservices.com/connect/entry.jspa?externalID=1928
   [Programming Amazon Web Services (O’Reilly 2008)]: http://www.amazon.com/gp/product/0596515812?ie=UTF8&tag=jamesmurty-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0596515812
   [authenticating SimpleDB REST requests]: http://docs.amazonwebservices.com/AmazonSimpleDB/latest/DeveloperGuide/REST_RESTAuth.html
-  [AWS.rb]: http://jamesmurty.com/static/files/2008/12/aws.rb
+  [AWS.rb]: http://james.murty.co/static/files/2008/12/aws.rb

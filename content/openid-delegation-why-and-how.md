@@ -28,7 +28,7 @@ means your own web site can act as your identity, while delegating the
 authentication process to one (or more) OpenID providers.
 
 In short, with delegation you can log in to sites using a URL you own
-like *jamesmurty.com*, while taking advantage of the strong
+like *james.murty.co*, while taking advantage of the strong
 authentication options offered by providers such as [Verisign's PIP][].
 Although my Verisign PIP identity happens to be
 *jmurty.pip.verisignlabs.com*, I can use my own web site as an alias for
@@ -60,8 +60,8 @@ If you have your own web site or blog and are able to edit the HTML
 pages directly, you can set up delegation by adding special
 `link` tags to the `head` section of one of your
 site's pages. You will most likely want to do this on the site's home
-page so you can use a short URL like *jamesmurty.com* instead of
-*jamesmurty.com/my-openid-page.html*.
+page so you can use a short URL like *james.murty.co* instead of
+*james.murty.co/my-openid-page.html*.
 
 Below are the `link` tags I use on my site to delegate to my
 *jmurty* Verisign PIP identity. You will need to use your own
@@ -100,7 +100,7 @@ One example of version incompatibility quirks is Google's Blogger.com,
 which allows you to comment on blog posts after logging in with an
 OpenID. Prior to adding the `openid2.*` tags I found that
 although Blogger would allow me to authenticate and post comments, it
-would replace my delegating identity *jamesmurty.com* with the delegated
+would replace my delegating identity *james.murty.co* with the delegated
 version *jmurty.pip.verisignlabs.com*. This meant that the delegation
 was essentially useless, since anyone clicking on the nickname for my
 comment would end up at an empty Verisign PIP landing page instead of my

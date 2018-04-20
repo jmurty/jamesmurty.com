@@ -72,10 +72,10 @@ and the [AWS blog][] for more information.
 The prior AWS support mechanisms, including the developer forums, remain
 free of charge.
 
-  [Screenshot of Health Dashboard comments following a fault]: http://jamesmurty.com/static/images/2008/04/servicehealthdashboard-ec2-fault.png "Screenshot of Health Dashboard comments following a fault"
+  [Screenshot of Health Dashboard comments following a fault]: http://james.murty.co/static/images/2008/04/servicehealthdashboard-ec2-fault.png "Screenshot of Health Dashboard comments following a fault"
   [Report an Issue]: http://www.amazon.com/gp/html-forms-controller/aws-report-issue1
-  [Report an Issue form]: http://jamesmurty.com/static/images/2008/04/servicehealthdashboard-report-issue-form.png "Report an Issue form"
-  [earlier this year]: http://jamesmurty.com/2008/02/16/major-s3-and-aws-outage-leaves-us-in-the-dark-in-more-ways-than-one/
+  [Report an Issue form]: http://james.murty.co/static/images/2008/04/servicehealthdashboard-report-issue-form.png "Report an Issue form"
+  [earlier this year]: http://james.murty.co/2008/02/16/major-s3-and-aws-outage-leaves-us-in-the-dark-in-more-ways-than-one/
   [AWS Blog]: http://aws.typepad.com/aws/2008/04/the-service-hea.html
   [visit the site]: http://status.aws.amazon.com/
   [AWS Premium Support]: http://www.amazon.com/gp/browse.html?node=566801011

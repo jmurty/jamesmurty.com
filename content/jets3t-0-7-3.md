@@ -24,7 +24,7 @@ visit the [development site][] to submit bug reports or contribute to
 the project.
 
   [announcement]: http://aws.typepad.com/aws/2010/03/amazon-s3-versioning-now-ready.html
-  [Bucket Versioning and Multi-Factor Authentication for delete]: http://.jamesmurty.com/2010/02/08/jets3t-s3-versioning-and-mfa/
+  [Bucket Versioning and Multi-Factor Authentication for delete]: http://james.murty.co/2010/02/08/jets3t-s3-versioning-and-mfa/
   [JetS3t web site]: http://jets3t.org/index.html
   [code samples]: http://jets3t.org/toolkit/code-samples.html
   [API Javadoc]: http://jets3t.org/api/index.html

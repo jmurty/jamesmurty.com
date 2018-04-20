@@ -93,5 +93,5 @@ installation difficulties.
   [download page]: http://jets3t.s3.amazonaws.com/downloads.html
   [CVS repository]: https://jets3t.dev.java.net/source/browse/jets3t/
   [some evidence]: http://groups.google.com/group/jets3t-users/browse_thread/thread/8b2c83a8bbba391e?hl=en
-  [Cockpit accessing my Eucalyptus storage]: http://jamesmurty.com/static/images/2009/04/cockpit-to-eucalyptus.jpg
+  [Cockpit accessing my Eucalyptus storage]: http://james.murty.co/static/images/2009/04/cockpit-to-eucalyptus.jpg
   [installing and configuring Eucalyptus on Ubuntu 9.04]: http://doc.ubuntu.com/ubuntu/serverguide/C/eucalyptus.html
